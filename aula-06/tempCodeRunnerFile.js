@@ -1,0 +1,1 @@
+user[key] = user[key].trim()
