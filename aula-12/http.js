@@ -2,11 +2,11 @@ const http = require('http')
 
 const sports = ['soccer', 'volley', 'basketball', 'tennis']
 const server = http.createServer(async (request, response) => {
-    const {method, statusCode, url} = request
+    const {method, url} = request
 
     response.setHeader('Content-type', 'text/html; charset=utf-8')
     
-    const bodyPromise = new Promise((resolve, reject) => {
+    const bodyPromise = new Promise((resolve) => {
         let body
 
         request.on('data', data => {

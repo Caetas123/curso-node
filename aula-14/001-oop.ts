@@ -1,4 +1,4 @@
-type Produto = {
+export type Produto = { //exporta para outro arquivo
     nome: string,
     valor: number
 }
@@ -15,7 +15,7 @@ type Produto = {
 //     }
 // }
 
-class Estabelecimento {
+class EstabelecimentoBase {
 
     private _filaDeEspera = 10
     
@@ -93,7 +93,7 @@ const padaria2 = {
 }
 
 
-const padaria3 = new Estabelecimento( // o new pega oq tiver dentro do constructor e repassa
+const padaria3 = new EstabelecimentoBase( // o new pega oq tiver dentro do constructor e repassa
     'Rua Dos Abacates, 13, 1320 - bloco A',
     'alimentação', 
     [
@@ -105,7 +105,7 @@ const padaria3 = new Estabelecimento( // o new pega oq tiver dentro do construct
 )
 
 
-const padaria4 = new Estabelecimento(
+const padaria4 = new EstabelecimentoBase(
     'Rua Dos Morasgos, 13, 1320 - bloco A',
     'alimentação', 
     [],

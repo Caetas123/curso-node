@@ -23,7 +23,7 @@ fs.readFile(filePath, {}, (erro, dados) => {
     )
     fs.writeFile(fileOutPath, linhasAjustadas.join('\n'), {}, (erro) => {
         if (erro) {
-            console.error(`Erro na escrota do arquivo no caminho ${fileOutPath}`)
+            console.error(`Erro na escrita do arquivo no caminho ${fileOutPath}`)
             return
         }
         console.log(`Arquivo salvo no bucket ${process.env.S3_BUCKET}`)
